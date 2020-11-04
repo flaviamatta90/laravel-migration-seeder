@@ -34,7 +34,7 @@ class GenresTableSeeder extends Seeder
         // $array = [];
 
         // while (count($array) < 10) {
-            
+
         //     $fakerWord = $faker->word;
 
         //     if (!in_array($fakerWord, $array))
@@ -48,12 +48,11 @@ class GenresTableSeeder extends Seeder
         //     $newGenre->name = $genre;
         //     $newGenre->save();
         // }
-        
 
         $counter = 0;
 
-        while ($counter < 10) { 
-            
+        while ($counter < 10) {
+
             $word = $faker->word;
             // $word = "ea";
 
@@ -63,15 +62,13 @@ class GenresTableSeeder extends Seeder
             // dd($data->count() == 0);
 
             if ($data->count() === 0) {
-                
+
                 $newGenre = new Genre;
                 $newGenre->name = $word;
-    
+
                 $newGenre->save();
                 $counter++;
-            }                      
+            }
         }
-
-
     }
 }
